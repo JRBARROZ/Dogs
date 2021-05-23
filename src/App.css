@@ -61,9 +61,20 @@ button, input{
     z-index: -1;
     background-color: #fb1;
 }
+.App{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh + 10rem);
+}
+.AppBody{
+    flex: 1;
+}
 @keyframes animeLeft {
     to{
         opacity: 1;
         transform: initial;
     }
+}
+.VictoryContainer{
+    height: initial !important;
 }

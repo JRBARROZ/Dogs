@@ -10,7 +10,7 @@ const LoginReset = () => {
     const [login, setLogin] = React.useState('');
     const [key, setKey] = React.useState('');
     const password = useForm();
-    const {error, loading, data, request} = useFetch()
+    const {error, loading, request} = useFetch()
     const navigate = useNavigate();
     React.useEffect(() =>{
         const params = new URLSearchParams(window.location.search);

@@ -12,7 +12,7 @@ const LoginLost = () => {
         event.preventDefault();
         if(email.validate()){
             const {url, options} = PASSWORD_LOST({login: email.value, url:window.location.href.replace('lost', 'reset')})
-            const {json} = await request(url, options);
+            await request(url, options);
         } 
     }
     return (

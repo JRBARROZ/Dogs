@@ -15,10 +15,8 @@ export const UserStorage = ({children}) => {
         try{
             const response = await fetch(url, options);
             const dataJson = await response.json();
-            console.log(dataJson);
             setData(dataJson);
             setLogin(true);
-            console.log(dataJson);
         }catch(err){
             console.log(err);
         }
@@ -31,7 +29,6 @@ export const UserStorage = ({children}) => {
             const response = await fetch(url, options);
             if(!response.ok) throw new Error(`Error: ${response.status}`);
             const {token} = await response.json();
-            console.log(token);
             window.localStorage.setItem('token', token);
             await getUser(token);
             navigate('/conta')
