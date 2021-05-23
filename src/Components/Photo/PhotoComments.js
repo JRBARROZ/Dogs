@@ -3,7 +3,6 @@ import {UserContext} from '../../UserContext.js'
 import PhotoCommentsForm from './PhotoCommentsForm.js'
 import styles from './PhotoComments.module.css'
 const PhotoComments = (props) => {
-    console.log(props);
     const [comments, setComments] = React.useState(()=> props.comments)
     const {login} = React.useContext(UserContext)
     const commentSection = React.useRef(null);
